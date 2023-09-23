@@ -4,17 +4,23 @@ from django.db import models
 class Author(models.Model):
     
     country_list = [
-        ('CIV','Ivory Coast'),
+        ('CI','Ivory Coast'),
         ('SN','Senegal'),
         ('ML','Mali'),
         ('TG','Togo'),
         ('BF','Burkina Faso')
     ]
-    
-    
+
     name = models.CharField(max_length = 100)
     phome = models.CharField(max_length = 15)
     email = models.CharField(max_length = 30)
-    country = models.Choices(country_list)
+    country = models.CharField(max_length=2, choices=country_list)
+    
+    
+    class Meta:
+        db_table = 'auteurs'
+        managed = True
+        verbose_name = 'auteur'
+        verbose_name_plural = 'auteurs'
     
     

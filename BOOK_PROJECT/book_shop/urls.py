@@ -38,7 +38,7 @@ urlpatterns = [
     path("",book_list),
     path("",book_delete),
     path("",book_update),
-    path("",author_list),
+    path("authors",author_list),
     path("",author_add),
     path("",author_update),
     path("",author_delete),

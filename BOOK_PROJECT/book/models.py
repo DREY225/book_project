@@ -13,7 +13,11 @@ class Book(models.Model):
 
     title = models.CharField(max_length = 100)
     description = models.CharField(max_length = 200)
+    author = models.CharField(max_length = 100)
     book_gender = models.CharField(max_length=2, choices = book_type)
+    
+    def __str__(self) -> str:
+        return self.title
     
     
     class Meta:

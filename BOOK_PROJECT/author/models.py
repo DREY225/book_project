@@ -17,6 +17,9 @@ class Author(models.Model):
     country = models.CharField(max_length=2, choices=country_list)
     
     
+    def __str__(self) -> str:
+        return self.name
+    
     class Meta:
         db_table = 'auteurs'
         managed = True

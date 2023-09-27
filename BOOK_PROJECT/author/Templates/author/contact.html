@@ -11,25 +11,32 @@
 <body>
     <h1>Liste des auteurs</h1>
    
-    <table>
-      <thead>
-          <tr>
-              <th>Nom</th>
-              <th>Téléphone</th>
-              <th>Pays</th>
-          </tr>
-      </thead>
-      <tbody>
-          {% for author in list_authors %}
-              <tr>
-                  <td>{{ author.name }}</td>
-                  <td>{{ author.phone }}</td>
-                  <td>{{ author.country }}</td>
-              </tr>
-          {% endfor %}
-      </tbody>
-  </table>
-  
+    
+
+    <ul>
+        {% for author  in list_authors  %}
+            <li> {{author.name}} * {{author.phone}} * {{author.country}}  </li>
+        {% endfor %} 
+    </ul>
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

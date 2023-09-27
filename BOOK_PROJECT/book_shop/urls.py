@@ -34,14 +34,16 @@ from author.views import author_update
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",home),
-    path("",book_add),
-    path("",book_list),
-    path("",book_delete),
-    path("",book_update),
-    path("authors",author_list),
-    path("",author_add),
-    path("",author_update),
-    path("",author_delete),
+    path("add_book",book_add, name="book_add"),
+    path("show_book",book_list, name="book_list"),
+    path("delete_book",book_delete, name="book_delete"),
+    path("update_book",book_update, name="book_update"),
+    path("show_author",author_list, name="author_list"),
+    path("add_author",author_add, name="author_add"),
+    path("update_author",author_update, name="author_update"),
+    path("delete_author",author_delete, name ="book_delete"),
+        
+
     
   
 ]
